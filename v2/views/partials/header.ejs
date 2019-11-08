@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<title>Online Voting App</title>
+</head>
+
+<body 
+        style=
+                "background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.indianexpress.com/2019/05/vote759.jpg?w=759&h=422&imflag=true'); 
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 100%;"
+>
+	<nav>
+		<div class="nav-wrapper teal lighten-2" style="padding-left : 50px; padding-right : 50px">
+			<a href="/" class="brand-logo" style="text-align: left">VOTE</a>
+                <ul class="navbar-nav" style="float:right">
+                        <% if(!currentUser){ %>
+                        <li class="nav-item">
+                                <a class="nav-link" href="/login">Login</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link" href="/register">Register</a>
+                        </li>
+                        <% } else { %>
+                        <li class="nav-item">
+                                <a class="nav-link" href="/">Signed in as <%= currentUser.username %></a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="/logout">Logout</a>
+                        </li>
+                        <% } %>
+                </ul>
+                </div>
+        </nav>
+    <br>

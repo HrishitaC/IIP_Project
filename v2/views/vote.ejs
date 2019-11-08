@@ -1,0 +1,26 @@
+<% include partials/header %>
+
+<form action="/vote" method="POST">
+    <div class="container">
+        <div class="col s12" style="margin-top : 40px">
+            <h1 class="display-4" style="color: white;">Select a party to cast vote</h1>
+        </div>
+        <div class="col s12" style="margin-top : 20px">
+            <% parties.forEach(function(party){ %>
+                <p>
+                    <label>
+                        <input class="with-gap" name="vote" type="radio" value="<%= party._id %>"/>
+                        <span style="color : white"><%= party.name %></span>
+                    </label>
+                </p>
+            <% }); %>
+        </div>
+    
+        <div class="col s12" style="margin-top : 20px">
+            <button class="waves-effect waves-light btn col s12">VOTE</button>
+        </div>
+    </div>
+    
+</form>
+
+<% include partials/footer %>

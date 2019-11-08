@@ -1,0 +1,28 @@
+<% include ../partials/header %>
+
+<form action="/login" method="POST">
+    <div class="row" style="padding: 20px 5px; margin-top: 120px">
+        <div class="col s3"></div>
+        <div class="col s6">
+            <input placeholder="username" name="username" type="text" id="uid" style="color: white;">
+        </div>
+        <div class="col s3"></div>
+    </div>
+    <div class="row" style="padding: 20px 5px;">
+        <div class="col s3"></div>
+        <div class="col s6">
+            <input placeholder="Password" name="password" type="password" id="pwd" style="color: white;">
+        </div>
+        <div class="col s3"></div>
+    </div>
+    <div class="row" style="padding: 20px 5px; text-align: center;">
+    
+        <div class="col s3"></div>
+        <div class="col s6">
+            <button class="waves-effect waves-light btn" id="submit">Submit</button>
+        </div>
+        <div class="col s3"></div>
+    </div>
+</form>
+
+<% include ../partials/footer %>
