@@ -1,0 +1,31 @@
+<% include partials/header %>
+
+<form action="/vote" method="POST">
+    <div class="row" style="padding: 20px">
+        <div class="col s9">
+            <input placeholder="Aadhaar Number" type="number" id="first_name" type="text" class="validate">
+        </div>
+        <div class="col s3">
+            <a class="waves-effect waves-light btn" href="#">SCAN</a>
+        </div>
+        <div class="col s12" style="margin-top : 40px">
+            Select a party to cast vote
+        </div>
+        <div class="col s12" style="margin-top : 20px">
+            <% parties.forEach(function(party){ %>
+                <p>
+                    <label>
+                        <input class="with-gap" name="vote" type="radio" value="<%= party._id %>"/>
+                        <span style="color : black"><%= party.name %></span>
+                    </label>
+                </p>
+            <% }); %>
+        </div>
+
+        <div class="col s12" style="margin-top : 20px">
+            <button class="waves-effect waves-light btn col s12">VOTE</button>
+        </div>
+    </div>
+</form>
+
+<% include partials/footer %>
